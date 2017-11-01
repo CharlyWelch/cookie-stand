@@ -1,4 +1,5 @@
 'use strict';
+const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];   
 
 function Store(name, min, max, avg,){
     this.name = name;
@@ -8,33 +9,6 @@ function Store(name, min, max, avg,){
     this.projHourlyCookies = [];
 }
 
-Store.prototype.hourlySales = function(){
-    const projHourlyCookies = [];
-    for (let i=0; i < 14; i++){
-        const numCustomers = getRandomIntInclusive(this.min, this.max);
-        const numCookies = Math.round(numCustomers * this.avg);
-        projHourlyCookies.push(numCookies);
-    }
-    this.projHourlyCookies = projHourlyCookies;  
-}
-
-Store.prototype.rendTable = function(){
-    const salesTable = document.getElementById('sales-table');
-    const title = document.createElement('THEAD');
-    title.textContent.content = "Projected Hourly Sales"
-    const colHeads = document.createElement('TH');
-    //loop through stores
-    const rows = document.createElement('TR');
-    //loop through hours
-    const cells = document.createElement('TD');
-
-    
-
-}
-
-const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];   
-
-
 const pioneer = new Store('Pioneer Square', 3, 24, 1.2);
 const powells = new Store('Powell\'s Books', 11, 38, 3.7);
 const stJohns = new Store('St Johns', 20, 38, 2.3);
@@ -43,13 +17,62 @@ const pdx = new Store('Portland Airport', 23, 65, 6.3);
 
 const stores = [pioneer, powells, stJohns, waterfront, pdx];
 
+
+Store.prototype.hourlySales = function(){
+    const projHourlyCookies = [];
+    for (let i=0; i < 14; i++){
+        const numCustomers = getRandomIntInclusive(this.min, this.max);
+        const numCookies = Math.round(numCustomers * this.avg);
+        this.projHourlyCookies.push(numCookies);
+    } 
+}
+
+const salesTable = document.getElementById('sales-table');
+const title = document.createElement('THEAD');
+title.textContent = "Projected Hourly Sales";
+salesTable.appendChild(title);
+const hoursRow = document.createElement('TR'); //create row
+const blankCell = document.createElement('TH'); // create bold cell for hours
+blankCell.textContent = ' ';  // blank cell at top left
+hoursRow.appendChild(blankCell); // append blank cell onto row
+
+for (let i = 0; i < hours.length; i++){ //loop through adding each hour to row
+    const hoursCell = document.createElement('TH');
+    hoursCell.textContent = hours[i];
+    hoursRow.appendChild(hoursCell);
+}
+title.appendChild(hoursRow); // append row onto table header
+
+
+Store.prototype.createRow = function(){
+    const row = document.createElement('TR');
+    const storeName = document.createElement('TH');
+    storeName.textContent = this.name;
+    row.appendChild(storeName);
+
+    for (let i= 0; i < this.projHourlyCookies.length; i++){
+        const cookieCells = document.createElement('TD');
+        cookieCells.textContent = this.projHourlyCookies[i];
+        row.appendChild(cookieCells);
+    }
+    salesTable.appendChild(row);
+    this.salesRow = row;
+    return this.salesRow;
+};
+
+for ( let i = 0; i < stores.length; i++){
+    stores[i].hourlySales();
+    stores[i].createRow();
+}
+
+
+
+
 function getRandomIntInclusive(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-
 
 // Store.prototype.render = function (){
 //     const hourlySalesList = document.getElementById('hourly-sales');
