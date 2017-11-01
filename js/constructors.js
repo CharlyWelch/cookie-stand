@@ -65,31 +65,27 @@ for ( let i = 0; i < stores.length; i++){
     stores[i].createRow();
 }
 
-
-
-
 function getRandomIntInclusive(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Store.prototype.render = function (){
-//     const hourlySalesList = document.getElementById('hourly-sales');
-//     const title = document.createElement('H2');
-//     title.textContent = this.name;
-//     const ul = document.createElement('UL');
-//     hourlySalesList.appendChild(title);
-//     hourlySalesList.appendChild(ul);
+const form = document.getElementById('new-store');
 
-//         for (let i = 0; i < hours.length; i++){
-//             let li = document.createElement('LI');
-//             li.textContent = hours[i] + '    ' + this.projHourlyCookies[i];
-//             ul.appendChild(li);
-//         }
-// }
-// 
-//for(let i = 0; i < stores.length; i++){
-//     stores[i].hourlySales();
-//     stores[i].render();
-// }
+console.log(form);
+
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    console.log('the form heard a submit event!');
+    
+    const name = document.getElementById('name').value;
+    const min = document.getElementById('min').value;
+    const max = document.getElementById('max').value;
+    const avg = document.getElementById('average').value;
+
+    const newStore = new Store(name, min, max, avg);
+    newStore.hourlySales();
+    salesTable.appendChild(newStore.createRow());
+
+})
