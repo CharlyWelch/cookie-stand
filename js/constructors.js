@@ -65,6 +65,22 @@ for ( let i = 0; i < stores.length; i++){
     stores[i].createRow();
 }
 
+const totalsRow = document.createElement('TR');
+salesTable.appendChild(totalsRow);
+const totalHead = document.createElement('TH');
+totalHead.textContent = 'Total';
+totalsRow.appendChild(totalHead);
+
+for (let i= 0; i < hours.length; i++){
+    const totalsCells = document.createElement('TD');
+    let total = 0
+    for (let j = 0; j < stores.length; j++){
+         total = total + stores[j].projHourlyCookies[i];        
+    }
+    totalsCells.textContent = total;
+    totalsRow.appendChild(totalsCells);
+}
+
 function getRandomIntInclusive(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
