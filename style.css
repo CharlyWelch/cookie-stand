@@ -89,14 +89,18 @@ nav ul li {
     margin-left: 100px;
 }
 
-#merch-head {
+.shop-head {
     text-align: center;
 }
 
-figure {
+figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+figcaption {
+    text-align: center;
 }
 
 #sales-head {
