@@ -12,10 +12,22 @@ h1 {
 h2 {
     font-family: 'Montserrat', sans-serif;
     color:#343533;
+    font-size: 2.5em;
 }
 
 p {
     font-size: 1.5em;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+dd {
+    line-height: 1.5em;
+    font-size: 1.25em;
 }
 
 thead {
@@ -55,13 +67,25 @@ input {
 
 #public-head {
     text-align: center;
+    background-image: url("images/salmon.png");
+    background-size: 155px;
+    background-position: center-top;
+
+}
+#sales-head {
+    font-size: 3em;
 }
 
 ul {
     list-style-type: none;
     font-family: 'Montserrat', sans-serif;
-    line-height: 2em;
-    
+    line-height: 2em; 
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 100px;
 }
 
 #new-store {
