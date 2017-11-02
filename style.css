@@ -3,10 +3,22 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
 
-h1 {
+.public-head {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 6.5em;
+    text-align: center;
+    color: #f5ebeb;
+    -webkit-text-stroke: 1px black;
+    font-weight: bolder;
+    background-image: url("images/salmon.png");
+    background-size: 155px;
+    background-position: center-top;
+}
+
+#sales-head {
     font-family: 'Montserrat', sans-serif;
     font-size: 5em;
-    color: #522a27;
+    color: #703131;
 }
 
 h2 {
@@ -65,13 +77,6 @@ input {
     background-color: #f2f2f2;
 }
 
-#public-head {
-    text-align: center;
-    background-image: url("images/salmon.png");
-    background-size: 155px;
-    background-position: center-top;
-
-}
 #sales-head {
     font-size: 3em;
 }
