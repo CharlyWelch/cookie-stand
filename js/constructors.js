@@ -34,7 +34,7 @@ title.textContent = "Projected Hourly Sales";
 salesTable.appendChild(title);
 const hoursRow = document.createElement('TR'); //create row
 const blankCell = document.createElement('TH'); // create bold cell for hours
-blankCell.textContent = ' ';  // blank cell at top left
+blankCell.textContent = 'Hours:';  // blank cell at top left
 hoursRow.appendChild(blankCell); // append blank cell onto row
 
 for (let i = 0; i < hours.length; i++){ //loop through adding each hour to row
@@ -65,6 +65,8 @@ for ( let i = 0; i < stores.length; i++){
     stores[i].hourlySales();
     stores[i].createRow();
 }
+
+// Add totals row:
 
 const totalsRow = document.createElement('TR');
 salesTable.appendChild(totalsRow);
