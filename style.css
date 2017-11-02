@@ -3,27 +3,45 @@ body {
 }
 
 #sales-table {
-    border-collapse: collapse;
-    border: 1px solid;
     background-color: #efefef;
+    border: 2px solid;
 }
 
 thead {
     font-weight: bold;
-    font-size: 20px;
+    /* font-size: 20px; */
+    text-align: center;
+    border-bottom: 1px solid;
 }
 
 th {
     padding: 7px 10px 10px 10px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-collapse: collapse;
 }
 
+td {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    text-align: center;
+}
 #new-store {
-    width: 200px;
-    padding: 20px;
+    border: 20px solid #313030;
+    text-align: center;
+    width: 300px;
+    padding: 40px;
     text-align: left;
 }
 
+
+label {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 input {
-    font-size: 25px;
+    font-size: 20px;
     background-color: #f2f2f2;
 }
