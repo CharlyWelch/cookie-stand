@@ -1,5 +1,6 @@
 body {
     background-color: #dbd2ad;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
 
 h1 {
@@ -10,7 +11,11 @@ h1 {
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    color:#50514f;
+    color:#343533;
+}
+
+p {
+    font-size: 1.5em;
 }
 
 thead {
@@ -35,6 +40,7 @@ td {
     border-right: 1px solid;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: #313130;
 }
 
 label {
