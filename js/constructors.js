@@ -27,6 +27,7 @@ Store.prototype.hourlySales = function(){
     } 
 }
 
+// Make beginning/top of table
 const salesTable = document.getElementById('sales-table');
 const title = document.createElement('THEAD');
 title.textContent = "Projected Hourly Sales";
