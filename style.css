@@ -77,10 +77,6 @@ input {
     background-color: #f2f2f2;
 }
 
-#sales-head {
-    font-size: 3em;
-}
-
 ul {
     list-style-type: none;
     font-family: 'Montserrat', sans-serif;
@@ -91,6 +87,27 @@ ul {
 nav ul li {
     display: inline-block;
     margin-left: 100px;
+}
+
+#merch-head {
+    text-align: center;
+}
+
+figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sales-head {
+    font-size: 3em;
+}
+
+#sales-table {
+    background-color:#e7e7db;
+    border: 2px solid;
+    border-radius: 1%;
+    margin: 0 auto;
 }
 
 #new-store {
@@ -104,11 +121,3 @@ nav ul li {
     border-color:#522a27;
     margin: 0 auto;
 }
-
-#sales-table {
-    background-color:#e7e7db;
-    border: 2px solid;
-    border-radius: 1%;
-    margin: 0 auto;
-}
-
