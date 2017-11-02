@@ -1,16 +1,22 @@
 body {
-    background-color: rgb(190, 214, 205);
+    background-color: #dbd2ad;
 }
 
-#sales-table {
-    background-color: #efefef;
-    border: 2px solid;
-    border-radius: 1%;
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5em;
+    color: #522a27;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color:#50514f;
 }
 
 thead {
     font-weight: bold;
-    /* font-size: 20px; */
+    font-size: 20px;
+    font-family: ;
     text-align: center;
     border-bottom: 1px solid;
 }
@@ -21,22 +27,15 @@ th {
     border-right: 2px solid;
     border-bottom: 2px solid;
     border-collapse: collapse;
+    background-color: #cacabd;
 }
 
 td {
     border-bottom: 1px solid;
     border-right: 1px solid;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#new-store {
-    border: 20px solid #313030;
-    text-align: center;
-    width: 300px;
-    padding: 40px;
-    text-align: left;
-    border-radius: 2%;
-}
-
 
 label {
     font-weight: bold;
@@ -47,3 +46,34 @@ input {
     font-size: 20px;
     background-color: #f2f2f2;
 }
+
+#public-head {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2em;
+    
+}
+
+#new-store {
+    border: 20px solid #313030;
+    background-color: #e7e7db;
+    text-align: center;
+    width: 300px;
+    padding: 40px;
+    text-align: left;
+    border-radius: 2%;
+    border-color:#522a27;
+    margin: 0 auto;
+}
+
+#sales-table {
+    background-color:#e7e7db;
+    border: 2px solid;
+    border-radius: 1%;
+    margin: 0 auto;
+}
+
