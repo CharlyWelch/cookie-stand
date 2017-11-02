@@ -5,6 +5,7 @@ body {
 #sales-table {
     background-color: #efefef;
     border: 2px solid;
+    border-radius: 1%;
 }
 
 thead {
@@ -16,9 +17,9 @@ thead {
 
 th {
     padding: 7px 10px 10px 10px;
-    border-top: 1px solid;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
     border-collapse: collapse;
 }
 
@@ -33,6 +34,7 @@ td {
     width: 300px;
     padding: 40px;
     text-align: left;
+    border-radius: 2%;
 }
 
 
