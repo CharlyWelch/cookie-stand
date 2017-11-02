@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    Salmon Cookie Sales
+    <title>Salmon Cookies</title>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <h1>Salmon Cookie Projected Sales</h1>
+    <h1>Salmon Cookies</h1>
     <div>
-        <table id = "sales-table">
-           
+        <table id = "sales-table"> 
         </table>
     </div>
-    <!-- <script src="js/objects.js"></script> -->
+    <h2> Add a Store!</h2>
+    <form id="new-store">
+        <fieldset>
+            <legend>Add a store</legend>
+            <label for="name">Store name</label>
+            <input id="name" type="text" placeholder="Store Name">
+            <label for="min">Minimum Customers </label>
+            <input id="min" type="number" placeholder="Min Customers/hr ">
+            <label for="max">Maximum Customers </label>
+            <input id="max" type="number" placeholder="Max Customers/hr">
+            <label for="average">Average Cookies per Customer</label>
+            <input id="average" type="number" placeholder="Avg Cookies/customer">
+            <button type="submit">Make Your Store!</button>
+        </fieldset>
+    </form>
     <script src="js/constructors.js"></script>
-    
+     <!-- <script src="js/objects.js"></script> -->
 </body>
 </html>

@@ -1,5 +1,29 @@
-#hourly-sales {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+body {
+    background-color: rgb(190, 214, 205);
+}
+
+#sales-table {
+    border-collapse: collapse;
+    border: 1px solid;
+    background-color: #efefef;
+}
+
+thead {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+th {
+    padding: 7px 10px 10px 10px;
+}
+
+#new-store {
+    width: 200px;
+    padding: 20px;
+    text-align: left;
+}
+
+input {
+    font-size: 25px;
+    background-color: #f2f2f2;
 }
