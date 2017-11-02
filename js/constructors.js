@@ -66,6 +66,8 @@ for ( let i = 0; i < stores.length; i++){
     stores[i].createRow();
 }
 
+// Add totals row:
+
 const totalsRow = document.createElement('TR');
 salesTable.appendChild(totalsRow);
 const totalHead = document.createElement('TH');
