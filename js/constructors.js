@@ -19,7 +19,6 @@ const stores = [pioneer, powells, stJohns, waterfront, pdx];
 
 
 Store.prototype.hourlySales = function(){
-    const projHourlyCookies = [];
     for (let i=0; i < 14; i++){
         const numCustomers = getRandomIntInclusive(this.min, this.max);
         const numCookies = Math.round(numCustomers * this.avg);
