@@ -91,16 +91,43 @@ nav ul li {
 
 .shop-head {
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:#343533;
+    font-size: 2.5em;
+}
+
+#order-cookies {
+    display: flex;
+    width: 50%;
+}
+
+label.order-cookies{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+input.order-cookies {
+  display: inline-block;
+  float: left;
 }
 
 figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 75px;
 }
 
 figcaption {
     text-align: center;
+    font-size: 2em;
+}
+
+#prints {
+    display: flex;
+    justify-content: space-between;
 }
 
 #sales-head {
