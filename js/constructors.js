@@ -26,7 +26,8 @@ Store.prototype.hourlySales = function(){
     } 
 }
 
-// Make beginning/top of table
+// Make top of table w/ hours ************************************************
+
 const salesTable = document.getElementById('sales-table');
 const title = document.createElement('THEAD');
 title.textContent = "Projected Hourly Sales";
@@ -42,6 +43,8 @@ for (let i = 0; i < hours.length; i++){ //loop through adding each hour to row
     hoursRow.appendChild(hoursCell);
 }
 title.appendChild(hoursRow); // append row onto table header
+
+// End table top ***************************************************************
 
 
 Store.prototype.createRow = function(){
@@ -74,7 +77,7 @@ totalHead.textContent = 'Total';
 totalsRow.appendChild(totalHead);
 
 for (let i= 0; i < hours.length; i++){
-    const totalsCells = document.createElement('TD');
+    const totalsCells = document.createElement('TH');
     let total = 0
     for (let j = 0; j < stores.length; j++){
          total = total + stores[j].projHourlyCookies[i];        
