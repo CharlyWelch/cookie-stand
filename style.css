@@ -45,7 +45,7 @@ dd {
 thead {
     font-weight: bold;
     font-size: 20px;
-    font-family: ;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     border-bottom: 1px solid;
 }
@@ -103,14 +103,12 @@ nav ul li {
 
 label.order-cookies{
     display: inline-block;
-    float: left;
     clear: left;
     width: 250px;
     text-align: right;
 }
 input.order-cookies {
   display: inline-block;
-  float: left;
 }
 
 figure img {

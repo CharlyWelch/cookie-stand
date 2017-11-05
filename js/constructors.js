@@ -1,7 +1,7 @@
 'use strict';
-const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];   
+const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-function Store(name, min, max, avg,){
+function Store(name, min, max, avg){
     this.name = name;
     this.min = min;
     this.max = max;
@@ -19,18 +19,18 @@ const stores = [pioneer, powells, stJohns, waterfront, pdx];
 
 
 Store.prototype.hourlySales = function(){
-    for (let i=0; i < 14; i++){
+    for (let i = 0; i < 14; i++){
         const numCustomers = getRandomIntInclusive(this.min, this.max);
         const numCookies = Math.round(numCustomers * this.avg);
         this.projHourlyCookies.push(numCookies);
-    } 
-}
+    }
+};
 
 // Make top of table w/ hours ************************************************
 
 const salesTable = document.getElementById('sales-table');
 const title = document.createElement('THEAD');
-title.textContent = "Projected Hourly Sales";
+title.textContent = 'Projected Hourly Sales';
 salesTable.appendChild(title);
 const hoursRow = document.createElement('TR'); //create row
 const blankCell = document.createElement('TH'); // create bold cell for hours
@@ -53,7 +53,7 @@ Store.prototype.createRow = function(){
     storeName.textContent = this.name;
     row.appendChild(storeName);
 
-    for (let i= 0; i < this.projHourlyCookies.length; i++){
+    for (let i = 0; i < this.projHourlyCookies.length; i++){
         const cookieCells = document.createElement('TD');
         cookieCells.textContent = this.projHourlyCookies[i];
         row.appendChild(cookieCells);
@@ -76,11 +76,11 @@ const totalHead = document.createElement('TH');
 totalHead.textContent = 'Total';
 totalsRow.appendChild(totalHead);
 
-for (let i= 0; i < hours.length; i++){
+for (let i = 0; i < hours.length; i++){
     const totalsCells = document.createElement('TH');
-    let total = 0
+    let total = 0;
     for (let j = 0; j < stores.length; j++){
-         total = total + stores[j].projHourlyCookies[i];        
+        total = total + stores[j].projHourlyCookies[i];
     }
     totalsCells.textContent = total;
     totalsRow.appendChild(totalsCells);
@@ -99,7 +99,7 @@ console.log(form);
 form.addEventListener('submit', function(event){
     event.preventDefault();
     console.log('the form heard a submit event!');
-    
+
     const name = document.getElementById('name').value;
     const min = document.getElementById('min').value;
     const max = document.getElementById('max').value;
@@ -109,4 +109,4 @@ form.addEventListener('submit', function(event){
     newStore.hourlySales();
     salesTable.appendChild(newStore.createRow());
 
-})
+});
