@@ -22,6 +22,11 @@ h2 {
     font-size: 2.5em;
 }
 
+nav ul li {
+    display: inline-block;
+    margin-left: 100px;
+}
+
 p {
     font-size: 1.5em;
 }
@@ -110,17 +115,17 @@ button {
 }
 
 #order-cookies {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
+    padding: 0 25%;
 }
 
 #order1 {
-   
+    display: inline-block;
+
 }
 
 #order2 {
-
+    display: inline-block;
+    float: right;
 }
 
 label {
@@ -138,11 +143,6 @@ ul {
     font-family: 'Montserrat', sans-serif;
     line-height: 2em; 
     margin: 0 auto;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 100px;
 }
 
 /* Merch Shop */
