@@ -1,5 +1,6 @@
+/* General/all pages */
 body {
-    background-color: #dbd2ad;
+    background-color: #def5f2;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
 
@@ -7,7 +8,7 @@ body {
     font-family: 'Paytone One', sans-serif;
     font-size: 6.5em;
     text-align: center;
-    color: #f5ebeb;
+    color: #12f7e0;
     -webkit-text-stroke: 1px black;
     font-weight: bolder;
     background-image: url("images/salmon.png");
@@ -15,22 +16,23 @@ body {
     background-position: center-top;
 }
 
-#sales-head {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 5em;
-    color: #703131;
-}
-
 h2 {
     font-family: 'Montserrat', sans-serif;
-    color:#343533;
+    color:#123b37;
     font-size: 2.5em;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 75px;
+    font-size: 1.5em;
 }
 
 p {
     font-size: 1.5em;
 }
 
+/* locations */
 dt {
     font-weight: bold;
     font-size: 1.5em;
@@ -40,6 +42,36 @@ dt {
 dd {
     line-height: 1.5em;
     font-size: 1.25em;
+}
+
+/* ****************** */
+
+/* Sales Page, Table, New Store Form */
+
+
+#sales-head {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: #123b37;;
+}
+
+#sales-table {
+    background-color:#b5e0eb;
+    border: 2px solid;
+    border-radius: 1%;
+    margin: 0 auto;
+}
+
+#new-store {
+    border: 20px solid #313030;
+    background-color: #b5e0eb;;
+    text-align: center;
+    width: 300px;
+    padding: 40px;
+    text-align: left;
+    border-radius: 2%;
+    border-color:#153531;;
+    margin: 0 auto;
 }
 
 thead {
@@ -56,7 +88,7 @@ th {
     border-right: 2px solid;
     border-bottom: 2px solid;
     border-collapse: collapse;
-    background-color: #cacabd;
+    background-color: #7fb6c4;
 }
 
 td {
@@ -67,14 +99,47 @@ td {
     color: #313130;
 }
 
+button {
+    background-color: #ec7741;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* ****************** */
+
+/* Order Form */
+
+.order-head {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color:#343533;
+}
+
+#order-cookies {
+    padding: 0 25%;
+}
+
+#order1 {
+    display: inline-block;
+    text-align: right;
+
+}
+
+#order2 {
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+
 label {
     font-weight: bold;
     font-size: 1.5em;
+    margin-top: 10px;
 }
 
 input {
     font-size: 20px;
-    background-color: #f2f2f2;
+    background-color: #eaf4f7;;
 }
 
 ul {
@@ -84,10 +149,7 @@ ul {
     margin: 0 auto;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-left: 100px;
-}
+/* Merch Shop */
 
 .shop-head {
     text-align: center;
@@ -96,26 +158,12 @@ nav ul li {
     font-size: 2.5em;
 }
 
-#order-cookies {
-    display: flex;
-    width: 50%;
-}
-
-label.order-cookies{
-    display: inline-block;
-    clear: left;
-    width: 250px;
-    text-align: right;
-}
-input.order-cookies {
-  display: inline-block;
-}
-
 figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
+    border: 3px solid black;
 }
 
 figcaption {
@@ -128,25 +176,5 @@ figcaption {
     justify-content: space-between;
 }
 
-#sales-head {
-    font-size: 3em;
-}
+/* ************* */
 
-#sales-table {
-    background-color:#e7e7db;
-    border: 2px solid;
-    border-radius: 1%;
-    margin: 0 auto;
-}
-
-#new-store {
-    border: 20px solid #313030;
-    background-color: #e7e7db;
-    text-align: center;
-    width: 300px;
-    padding: 40px;
-    text-align: left;
-    border-radius: 2%;
-    border-color:#522a27;
-    margin: 0 auto;
-}
