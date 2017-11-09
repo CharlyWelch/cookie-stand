@@ -1,6 +1,6 @@
 'use strict';
 
-const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];   
+const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 
 const pioneer = {
@@ -11,7 +11,7 @@ const pioneer = {
     projHourlyCookies: [],
     hourlySales: hourlySales,
     render: render,
-}
+};
 
 const powells = {
     name: 'Powell\'s Books',
@@ -21,7 +21,7 @@ const powells = {
     projHourlyCookies: [],
     hourlySales: hourlySales,
     render: render,
-}
+};
 
 const stJohns = {
     name: 'St Johns',
@@ -31,7 +31,7 @@ const stJohns = {
     projHourlyCookies: [],
     hourlySales: hourlySales,
     render: render,
-}
+};
 
 const waterfront = {
     name: 'Portland Waterfront',
@@ -41,7 +41,7 @@ const waterfront = {
     projHourlyCookies: [],
     hourlySales: hourlySales,
     render: render,
-}
+};
 
 const pdx = {
     name: 'Portland Airport',
@@ -51,16 +51,16 @@ const pdx = {
     projHourlyCookies: [],
     hourlySales: hourlySales,
     render: render
-}
+};
 
-function hourlySales(){ 
+function hourlySales(){
     const projHourlyCookies = [];
-    for (let i=0; i < 14; i++){
+    for (let i = 0; i < 14; i++){
         const numCustomers = getRandomIntInclusive(this.min, this.max);
         const numCookies = Math.round(numCustomers * this.avg);
         projHourlyCookies.push(numCookies);
     }
-    this.projHourlyCookies = projHourlyCookies;  
+    this.projHourlyCookies = projHourlyCookies;
 }
 
 function render(){
@@ -71,11 +71,11 @@ function render(){
     hourlySalesList.appendChild(title);
     hourlySalesList.appendChild(ul);
 
-        for (let i = 0; i < hours.length; i++){
-            let li = document.createElement('LI');
-            li.textContent = hours[i] + '    ' + this.projHourlyCookies[i];
-            ul.appendChild(li);
-        }
+    for (let i = 0; i < hours.length; i++){
+        const li = document.createElement('LI');
+        li.textContent = hours[i] + '    ' + this.projHourlyCookies[i];
+        ul.appendChild(li);
+    }
 }
 
 const stores = [pioneer, powells, stJohns, waterfront, pdx];
